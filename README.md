@@ -10,10 +10,10 @@
   4.为了不引起歧义，缓存的名称保持与方法名相同；
   
   5.为了表明一个操作是读取缓存数据还是拉取数据库数据，方法体中有控制台输出，如果是读取缓存则不会有控制台输出:
-       ![alt text](https://github.com/shenzhanwang/Spring-redis/blob/master/%E6%88%AA%E5%9B%BE/2.jpg)
+       ![输入图片说明](http://git.oschina.net/uploads/images/2016/1203/114814_d2e20090_1110335.jpeg "在这里输入图片标题")
        
  6.当访问了一次actor列表的页面后，我们看到redis数据库中新增了记录：
-     ![alt text](https://github.com/shenzhanwang/Spring-redis/blob/master/%E6%88%AA%E5%9B%BE/3.jpg)
+     ![输入图片说明](http://git.oschina.net/uploads/images/2016/1203/114840_6b798e23_1110335.jpeg "在这里输入图片标题")
      
  7.以下是添加了缓存的页面：
-  ![alt text](https://github.com/shenzhanwang/Spring-redis/blob/master/%E6%88%AA%E5%9B%BE/1.jpg)
+  ![输入图片说明](http://git.oschina.net/uploads/images/2016/1203/114855_61a29982_1110335.jpeg "在这里输入图片标题")
