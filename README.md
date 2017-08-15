@@ -5,7 +5,7 @@
   
   2.界面的功能与项目http://git.oschina.net/shenzhanwang/SSM 一模一样，只是在业务逻辑层ActorServiceImpl中添加了缓存支持；
   
-  3.添加缓存使用@Cacheable注解，清空缓存使用@CacheEvict注解。一般读取方法需要添加@Cacheable，而删除、更新、添加需要使用@CacheEvict，以防止失效的缓存数据在前端进行了展示；
+  3.添加缓存使用@Cacheable注解，清空缓存使用@CacheEvict注解。一般读取方法需要添加@Cacheable，而删除需要使用@CacheEvict，添加和修改使用@CachePut，以防止失效的缓存数据在前端进行了展示；
   
   4.为了不引起歧义，缓存的名称保持与方法名相同；
   
