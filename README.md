@@ -32,7 +32,6 @@ redis的WATCH命令可用于监控变量，事务执行时若监控的变量发�
 - 集中式地管理session，避免负载均衡后无法登录
 - 实现分布式锁，解决并发问题
 
-
 ### 附录：个人作品索引目录（持续更新）
 
 #### 基础篇:职业化，从做好OA系统开始
@@ -72,7 +71,7 @@ redis的WATCH命令可用于监控变量，事务执行时若监控的变量发�
 29. 搭建可扩展的ActiveMQ高可用集群 [购买]
 30. 实现Mysql数据库的主从复制、读写分离、分表分库、负载均衡和高可用 [购买]
 31. 搭建高可用redis集群实现分布式缓存 [购买]
-32. [Spring整合SolrJ实现全文检索](https://gitee.com/shenzhanwang/Spring-solr)
+32. [Spring整合Elastic search实现全文检索](https://gitee.com/shenzhanwang/Spring-elastic_search)
 #### 特别篇：分布式事务和并发控制
 33. 基于可靠消息最终一致性实现分布式事务（activeMQ）[购买]
 34. 使用TCC框架实现分布式事务（dubbo版）[购买]
