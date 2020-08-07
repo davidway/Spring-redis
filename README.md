@@ -31,6 +31,8 @@ redis的WATCH命令可用于监控变量，事务执行时若监控的变量发�
 - 缓存数据库的行，减少数据库的压力
 - 集中式地管理session，避免负载均衡后无法登录
 - 实现分布式锁，解决并发问题
+### redis集群搭建方法
+[参考WIKI](https://gitee.com/shenzhanwang/Spring-redis/wikis/redis%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA?sort_id=43374)
 ### 附录：个人作品索引目录（持续更新）
 
 #### 基础篇:职业化，从做好OA系统开始
