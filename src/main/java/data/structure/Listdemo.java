@@ -1,6 +1,8 @@
 package data.structure;
 
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
+import redis.clients.jedis.JedisPoolConfig;
 import redis.clients.jedis.SortingParams;
 
 /**
@@ -10,7 +12,16 @@ import redis.clients.jedis.SortingParams;
  */
 public class Listdemo {
 	public static void main(String[] args) {
-		Jedis conn = new Jedis("localhost");
+		//获得连接池配置对象，设置配置项
+        JedisPoolConfig config = new JedisPoolConfig();
+        //最大连接数
+        config.setMaxTotal(30);
+        //最大空闲连接数
+        config.setMaxIdle(10);
+ 
+        //获得连接池
+        JedisPool jedisPool = new JedisPool(config, "localhost", 6379);
+        Jedis conn = jedisPool.getResource();
         conn.select(15);
         // 往列表尾部追加元素
         conn.rpush("bbq", "qq");
@@ -38,5 +49,7 @@ public class Listdemo {
         conn.rpush("list", "wwq");
         conn.rpush("list", "aaa");
         
+        
+        jedisPool.close();
 	}
 }
