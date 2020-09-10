@@ -1,4 +1,4 @@
-package data.structure;
+package boot.spring.data.structure;
 
 import redis.clients.jedis.Jedis;
 
