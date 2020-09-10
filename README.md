@@ -1,4 +1,4 @@
-## jedis
+## Spring-redis
 ### 使用说明
 
 1.  包含jedis对五种数据结构list，string，hashmap，zset，set的读写实例
