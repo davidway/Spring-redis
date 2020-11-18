@@ -24,5 +24,6 @@ public class SortedSetDemo {
         conn.zrem("sets", "a");
         // 遍历有序集合
         System.out.println(conn.zrange("sets", 0, -1));
+        conn.close();
 	}
 }

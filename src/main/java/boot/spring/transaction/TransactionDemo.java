@@ -32,5 +32,6 @@ public class TransactionDemo {
         List<Object> list = transaction2.exec();
         System.out.println(list.size());
         System.out.println(conn.get("tracn"));
+        conn.close();
 	}
 }

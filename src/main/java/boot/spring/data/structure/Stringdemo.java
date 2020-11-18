@@ -36,5 +36,6 @@ public class Stringdemo {
         
         byte [] k={127};
         conn.set("byte".getBytes(), k);
+        conn.close();
 	}
 }

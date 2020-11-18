@@ -50,6 +50,6 @@ public class Listdemo {
         conn.rpush("list", "aaa");
         
         
-        jedisPool.close();
+        conn.close();
 	}
 }

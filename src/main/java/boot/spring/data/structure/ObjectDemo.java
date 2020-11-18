@@ -34,7 +34,7 @@ public class ObjectDemo {
 	    
 	    System.out.println(r);
 	    
-	    jedisPool.close();
+	    conn.close();
 	}
 	
 }
