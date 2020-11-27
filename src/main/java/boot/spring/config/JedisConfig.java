@@ -11,26 +11,15 @@ import redis.clients.jedis.JedisPoolConfig;
 @Configuration
 public class JedisConfig {
 	@Bean
-    public Jedis jedis(JedisPool pool) {
-		pool = jedisPool();
-        Jedis conn = pool.getResource();
-        conn.select(15);
-        return conn;
-    }
-	
-	@Bean
-    public JedisPool jedisPool() {
-		return new JedisPool(jedisPoolConfig(), "localhost", 6379);
-	}
-	
-	@Bean
-    public JedisPoolConfig jedisPoolConfig() {
-		//获得连接池配置对象，设置配置项
-        JedisPoolConfig config = new JedisPoolConfig();
-        //最大连接数
-        config.setMaxTotal(30);
-        //最大空闲连接数
-        config.setMaxIdle(10);
-        return config;
+	public JedisPool redisPoolFactory() throws Exception {
+		JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
+		jedisPoolConfig.setMaxIdle(100000);
+		jedisPoolConfig.setMaxWaitMillis(1000);
+		// 连接耗尽时是否阻塞, false报异常,ture阻塞直到超时, 默认true
+		jedisPoolConfig.setBlockWhenExhausted(true);
+		// 是否启用pool的jmx管理功能, 默认true
+		jedisPoolConfig.setJmxEnabled(true);
+		JedisPool jedisPool = new JedisPool(jedisPoolConfig, "localhost", 6379, 50000);
+		return jedisPool;
 	}
 }

@@ -1,5 +1,7 @@
 package boot.spring.data.structure;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
@@ -11,6 +13,10 @@ import redis.clients.jedis.SortingParams;
  *
  */
 public class Listdemo {
+	
+	@Autowired
+	JedisPool pool;
+	
 	public static void main(String[] args) {
 		//获得连接池配置对象，设置配置项
         JedisPoolConfig config = new JedisPoolConfig();
